@@ -10,6 +10,11 @@ def hello_world():
     name = os.environ.get("NAME", "World")
     return "EVRY {}!".format(name)
 
+@app.route("/pj")
+def PJ1():
+    name = os.environ.get("NAME", "PJ")
+    return "I am {}!".format(name)
+
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
