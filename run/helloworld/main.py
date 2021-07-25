@@ -21,8 +21,6 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-app = Flask(__name__)
-
 # Initialize Firestore DB
 cred = credentials.Certificate('key.json')
 default_app = initialize_app(cred)
