@@ -11,10 +11,10 @@ from flask import Flask
 app = Flask(__name__)
 
 # MySQL configurations
-app.config['MYSQL_DATABASE_USER'] = 'shiva'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'googlecloud'
-app.config['MYSQL_DATABASE_DB'] = 'car_obd_data'
-app.config['MYSQL_DATABASE_HOST'] = '35.200.230.177'
+app.config['MYSQL_DATABASE_USER'] = 'du'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'sdsfsd'
+app.config['MYSQL_DATABASE_DB'] = 'waewqwe'
+app.config['MYSQL_DATABASE_HOST'] = 'ipaddress'
 mysql.init_app(app)
 
 @app.route('/add', methods=['POST'])
