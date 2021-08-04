@@ -21,14 +21,14 @@ mysql.init_app(app)
 def add_user():
     try:
         _json = request.json
-        _name = _json['name']
-        _email = _json['email']
-        _password = _json['pwd']
-        if _name and _email and _password and request.method == 'POST':
+        _name = _json['dev_id']
+        _email = _json['location']
+        
+        if _name and _email and request.method == 'POST':
             _hashed_password = '1234'
                
-            sql = "INSERT INTO tbl_user(user_name, user_email, user_password) VALUES(%s, %s, %s)"
-            data = (_name, _email, _hashed_password,)
+            sql = "INSERT INTO car_data(dev_id, location) VALUES(%s, %s)"
+            data = (_name, _email)
             conn = mysql.connect()
             cursor = conn.cursor()
             cursor.execute(sql, data)
